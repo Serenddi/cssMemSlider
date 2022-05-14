@@ -1,5 +1,4 @@
 body {
-    border: 1px solid red;
     margin: 0 auto;
     margin-top: 50px;
     width: 90%;
@@ -7,7 +6,6 @@ body {
 }
 
 .wrapper {
-    border: 1px solid red;
     margin: 0 auto;
     width: 80%;
     height: 650px;
@@ -17,34 +15,64 @@ body {
     justify-content: center;
 }
 
-input:hover {
-    cursor: pointer;
-    
+input {
+    display: none;
 }
 
-.under {
-    width: 500px;
+.controls {
     display: flex;
-    flex-direction: row;
+    width: 100px;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-left: 25rem;
+    margin-top: -1rem;
 }
 
+.texts {
+    margin-top: 20px;
+    margin-left: -450px;
+}
+
+
+label {
+    border: 2px solid #e9be13;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+
+label:hover {
+    cursor: pointer;
+    background-color: #e9be13;
+}
+
+
+#radio1:checked ~ .controls label:nth-of-type(1),
+#radio2:checked ~ .controls label:nth-of-type(2),
+#radio3:checked ~ .controls label:nth-of-type(3),
+#radio4:checked ~ .controls label:nth-of-type(4) {
+	background-color: #e9be13;
+}
+
+
+.slides {
+    height: 100%;
+    width: 100%;
+}
 
 .texts {
     font-size: 16px;
 }
 
 .text2 {
-    visibility: hidden;
+    display: none;
 }
 
 .text3 {
-    visibility: hidden;
+    display: none;
 }
 
 .text4 {
-    visibility: hidden;
+    display: none;
 }
 
 .slide2 {
@@ -57,4 +85,27 @@ input:hover {
 
 .slide4 {
     display: none;
+}
+
+@media  screen and (min-width: 320px) and (max-width: 767px) {
+    body {
+        width: 320px;
+        justify-content: center;
+    }
+
+    
+    .controls {
+        display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 0;
+
+    }
+
+    .texts {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+
 }
