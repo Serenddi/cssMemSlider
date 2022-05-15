@@ -87,12 +87,107 @@ label:hover {
     display: none;
 }
 
+#radio2:checked ~ .images > .slide1 {
+    visibility: hidden;
+}
+
+#radio2:checked ~ .images > .slide2 {
+    display: block;
+    margin-top: -33.75rem;
+}
+
+#radio2:checked ~ .text1 {
+    display: none;
+}
+
+#radio2:checked ~ .text2 {
+    display: inline;
+}
+
+#radio3:checked ~ .images > .slide2 {
+    visibility: hidden;
+}
+
+#radio3:checked ~ .images > .slide3 {
+    display: block;
+    margin-top: -33.75rem;
+}
+
+#radio3:checked ~ .text1 {
+    display: none;
+}
+
+#radio3:checked ~ .text2 {
+    display: none;
+}
+
+#radio3:checked ~ .text3 {
+    display: inline;
+}
+
+#radio4:checked ~ .images > .slide3 {
+    visibility: hidden;
+}
+
+#radio4:checked ~ .images > .slide4 {
+    display: block;
+    margin-top: -33.75rem;
+}
+
+#radio4:checked ~ .text1 {
+    display: none;
+}
+
+#radio4:checked ~ .text2 {
+    display: none;
+}
+
+#radio4:checked ~ .text3 {
+    display: none;
+}
+
+#radio4:checked ~ .text4 {
+    display: inline;
+}
+
 @media  screen and (min-width: 320px) and (max-width: 767px) {
     body {
-        width: 320px;
+        width: 20rem;
         justify-content: center;
     }
 
+    #radio2:checked ~ .images > .slide1 {
+        visibility: hidden;
+    }
+    
+    #radio2:checked ~ .images > .slide2 {
+        display: block;
+        height: 16.25rem;
+        width: 16rem;
+        margin-top: -265px;
+    }
+
+    #radio3:checked ~ .images > .slide2 {
+        visibility: hidden;
+    }
+    
+    #radio3:checked ~ .images > .slide3 {
+        display: block;
+        height: 16.25rem;
+        width: 16rem;
+        margin-top: -265px;
+    }
+
+    #radio4:checked ~ .images > .slide3 {
+        visibility: hidden;
+    }
+    
+    #radio4:checked ~ .images > .slide4 {
+        display: block;
+        height: 16.25rem;
+        width: 16rem;
+        margin-top: -265px;
+    }
     
     .controls {
         display: flex;
@@ -106,6 +201,4 @@ label:hover {
         margin-top: 10px;
         margin-left: 0;
     }
-
-
-}
+  }
