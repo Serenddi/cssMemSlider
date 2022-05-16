@@ -32,10 +32,20 @@ input {
     margin-left: -450px;
 }
 
+.in {
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.in:hover {
+    cursor: pointer;
+}
 
 label {
     border: 2px solid #e9be13;
-    border-radius: 100%;
+    border-radius: 50%;
     width: 10px;
     height: 10px;
 }
@@ -60,7 +70,7 @@ label:hover {
 }
 
 .texts {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .text2 {
@@ -87,14 +97,32 @@ label:hover {
     display: none;
 }
 
+#radio1:checked ~ .images > .slide1 {
+    animation: nev 2s alternate;
+}
+
+#radio1:checked ~ .text1 {
+    animation: nev 2s alternate;
+}
+
 #radio2:checked ~ .images > .slide1 {
     visibility: hidden;
 }
 
 #radio2:checked ~ .images > .slide2 {
     display: block;
-    margin-top: -33.75rem;
+    margin-top: -33.88rem;
+    animation: nev 2s alternate;
 }
+
+@keyframes nev {
+    from { 
+    opacity: 0; 
+    }
+    to { 
+    opacity: 1;
+    }
+    }
 
 #radio2:checked ~ .text1 {
     display: none;
@@ -102,6 +130,11 @@ label:hover {
 
 #radio2:checked ~ .text2 {
     display: inline;
+    animation: nev 2s alternate;
+}
+
+#radio3:checked ~ .images > .slide1 {
+    visibility: hidden;
 }
 
 #radio3:checked ~ .images > .slide2 {
@@ -110,7 +143,8 @@ label:hover {
 
 #radio3:checked ~ .images > .slide3 {
     display: block;
-    margin-top: -33.75rem;
+    margin-top: -33.88rem;
+    animation: nev 2s alternate;
 }
 
 #radio3:checked ~ .text1 {
@@ -123,6 +157,11 @@ label:hover {
 
 #radio3:checked ~ .text3 {
     display: inline;
+    animation: nev 2s;
+}
+
+#radio4:checked ~ .images > .slide1 {
+    visibility: hidden;
 }
 
 #radio4:checked ~ .images > .slide3 {
@@ -131,7 +170,9 @@ label:hover {
 
 #radio4:checked ~ .images > .slide4 {
     display: block;
-    margin-top: -33.75rem;
+    margin-top: -33.88rem;
+    animation: nev 2s alternate;
+
 }
 
 #radio4:checked ~ .text1 {
@@ -148,12 +189,25 @@ label:hover {
 
 #radio4:checked ~ .text4 {
     display: inline;
+    animation: nev 3s alternate;
+
 }
 
 @media  screen and (min-width: 320px) and (max-width: 767px) {
     body {
         width: 20rem;
         justify-content: center;
+    }
+
+    .in {
+        width: 30px;
+        height: 30px;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+    
+    .in:hover {
+        cursor: pointer;
     }
 
     #radio2:checked ~ .images > .slide1 {
@@ -191,9 +245,9 @@ label:hover {
     
     .controls {
         display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-left: 0;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 0;
 
     }
 
