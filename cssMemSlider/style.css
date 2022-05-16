@@ -1,0 +1,258 @@
+body {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 90%;
+    height: 650px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    display: none;
+}
+
+.controls {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    margin-left: 25rem;
+    margin-top: -1rem;
+}
+
+.texts {
+    margin-top: 20px;
+    margin-left: -450px;
+}
+
+.in {
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.in:hover {
+    cursor: pointer;
+}
+
+label {
+    border: 2px solid #e9be13;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+label:hover {
+    cursor: pointer;
+    background-color: #e9be13;
+}
+
+
+#radio1:checked ~ .controls label:nth-of-type(1),
+#radio2:checked ~ .controls label:nth-of-type(2),
+#radio3:checked ~ .controls label:nth-of-type(3),
+#radio4:checked ~ .controls label:nth-of-type(4) {
+	background-color: #e9be13;
+}
+
+
+.slides {
+    height: 100%;
+    width: 100%;
+}
+
+.texts {
+    font-size: 1rem;
+}
+
+.text2 {
+    display: none;
+}
+
+.text3 {
+    display: none;
+}
+
+.text4 {
+    display: none;
+}
+
+.slide2 {
+    display: none;
+}
+
+.slide3 {
+    display: none;
+}
+
+.slide4 {
+    display: none;
+}
+
+#radio1:checked ~ .images > .slide1 {
+    animation: nev 2s alternate;
+}
+
+#radio1:checked ~ .text1 {
+    animation: nev 2s alternate;
+}
+
+#radio2:checked ~ .images > .slide1 {
+    visibility: hidden;
+}
+
+#radio2:checked ~ .images > .slide2 {
+    display: block;
+    margin-top: -33.88rem;
+    animation: nev 2s alternate;
+}
+
+@keyframes nev {
+    from { 
+    opacity: 0; 
+    }
+    to { 
+    opacity: 1;
+    }
+    }
+
+#radio2:checked ~ .text1 {
+    display: none;
+}
+
+#radio2:checked ~ .text2 {
+    display: inline;
+    animation: nev 2s alternate;
+}
+
+#radio3:checked ~ .images > .slide1 {
+    visibility: hidden;
+}
+
+#radio3:checked ~ .images > .slide2 {
+    visibility: hidden;
+}
+
+#radio3:checked ~ .images > .slide3 {
+    display: block;
+    margin-top: -33.88rem;
+    animation: nev 2s alternate;
+}
+
+#radio3:checked ~ .text1 {
+    display: none;
+}
+
+#radio3:checked ~ .text2 {
+    display: none;
+}
+
+#radio3:checked ~ .text3 {
+    display: inline;
+    animation: nev 2s;
+}
+
+#radio4:checked ~ .images > .slide1 {
+    visibility: hidden;
+}
+
+#radio4:checked ~ .images > .slide3 {
+    visibility: hidden;
+}
+
+#radio4:checked ~ .images > .slide4 {
+    display: block;
+    margin-top: -33.88rem;
+    animation: nev 2s alternate;
+
+}
+
+#radio4:checked ~ .text1 {
+    display: none;
+}
+
+#radio4:checked ~ .text2 {
+    display: none;
+}
+
+#radio4:checked ~ .text3 {
+    display: none;
+}
+
+#radio4:checked ~ .text4 {
+    display: inline;
+    animation: nev 3s alternate;
+
+}
+
+@media  screen and (min-width: 320px) and (max-width: 767px) {
+    body {
+        width: 20rem;
+        justify-content: center;
+    }
+
+    .in {
+        width: 30px;
+        height: 30px;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+    
+    .in:hover {
+        cursor: pointer;
+    }
+
+    #radio2:checked ~ .images > .slide1 {
+        visibility: hidden;
+    }
+    
+    #radio2:checked ~ .images > .slide2 {
+        display: block;
+        height: 16.25rem;
+        width: 16rem;
+        margin-top: -265px;
+    }
+
+    #radio3:checked ~ .images > .slide2 {
+        visibility: hidden;
+    }
+    
+    #radio3:checked ~ .images > .slide3 {
+        display: block;
+        height: 16.25rem;
+        width: 16rem;
+        margin-top: -265px;
+    }
+
+    #radio4:checked ~ .images > .slide3 {
+        visibility: hidden;
+    }
+    
+    #radio4:checked ~ .images > .slide4 {
+        display: block;
+        height: 16.25rem;
+        width: 16rem;
+        margin-top: -265px;
+    }
+    
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 0;
+
+    }
+
+    .texts {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+  }
